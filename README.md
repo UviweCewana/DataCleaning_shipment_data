@@ -1,5 +1,6 @@
 # DataCleaning_shipment_data  
-Data cleaning project on messy shipment data  (BigQuery Project: https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1sproject-bb3551be-8ada-46bf-bfa!2safrica-south1!3sfbdb4ffa-9b07-4618-89fe-df535fa87647!2e1)
+Data cleaning project on messy shipment data
+(BigQuery Project: https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1sproject-bb3551be-8ada-46bf-bfa!2safrica-south1!3sfbdb4ffa-9b07-4618-89fe-df535fa87647!2e1)
 
 ## Step 1: Removing Trailing/Leading spaces
 
