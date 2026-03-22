@@ -1,0 +1,58 @@
+#  Shipment Data Quality Pipeline
+
+[![BigQuery](https://img.shields.io/badge/BigQuery-Data%20Warehouse-blue)](https://cloud.google.com/bigquery)
+[![SQL](https://img.shields.io/badge/SQL-Advanced-orange)](https://en.wikipedia.org/wiki/SQL)
+[![Status](https://img.shields.io/badge/Status-Completed-green)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow)]()
+
+##  Project Overview
+
+A comprehensive data cleaning and transformation pipeline designed to handle messy, real-world shipment data. This project demonstrates professional data engineering practices by processing inconsistent, duplicate, and erroneous records into analysis-ready datasets using **Google BigQuery**.
+
+###  Business Context
+
+Logistics companies face significant challenges with data quality:
+- **Inconsistent formatting** across different systems
+- **Duplicate records** from multiple entry points
+- **Invalid values** (negative weights, zero costs)
+- **Date logic errors** (delivery before shipment)
+- **Outliers** skewing business metrics
+
+This pipeline addresses these issues systematically, enabling accurate reporting, cost analysis, and operational insights.
+
+---
+
+##  Dataset Description
+
+### Input: `dirty_shipments.csv`
+Raw shipment data containing **25 records** with various data quality issues:
+
+| Column | Description | Issues Present |
+|--------|-------------|----------------|
+| `shipment_id` | Unique shipment identifier | None |
+| `origin_warehouse` | Departure warehouse | Inconsistent case, whitespace |
+| `destination_city` | Delivery city | Leading/trailing spaces |
+| `destination_state` | State code | Lowercase, missing values |
+| `carrier` | Shipping carrier | Inconsistent case, formatting |
+| `ship_date` | Shipment date | Multiple date formats |
+| `delivery_date` | Delivery date | Missing values, before ship_date |
+| `weight_kg` | Shipment weight (kg) | Negative values, zeros |
+| `freight_cost` | Shipping cost | Outliers (15,000), missing values |
+| `shipment_status` | Current status | Inconsistent case, typos |
+| `items_count` | Number of items | Negative values |
+| `damage_reported` | Damage indicator | String 'NULL', inconsistent case |
+
+---
+
+##  Data Cleaning Pipeline
+
+The pipeline is structured as **6 progressive stages**, each building upon the previous:
+
+### Stage 1: Text Standardization
+**Goal:** Normalize all text fields for consistency
+
+```sql
+-- Remove whitespace, standardize case
+INITCAP(TRIM(origin_warehouse))    -- 'warehouse a' → 'Warehouse A'
+UPPER(TRIM(destination_state))      -- 'tx' → 'TX'
+INITCAP(TRIM(carrier))              -- 'FASTFREIGHT' → 'Fastfreight'
