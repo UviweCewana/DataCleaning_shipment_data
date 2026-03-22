@@ -18,7 +18,7 @@ Handles inconsistent text by using 'INITCAP' to capitalise Destination cities, o
 
 <img width="2508" height="2668" alt="image" src="https://github.com/user-attachments/assets/02a60101-44fc-4dce-9f40-cd1b355ec567" />
 
-Step 5 : fixing negetive values and suspicious values
+## Step 5 : fixing negetive values and suspicious values
 <img width="2440" height="1660" alt="image" src="https://github.com/user-attachments/assets/025f83af-5b1d-4daf-ae54-919ebf49988b" />
 
 Eliminating negative weight values, as that would not be possible for any shipment and definding NULL values
@@ -29,7 +29,7 @@ Eliminating negative weight values, as that would not be possible for any shipme
 
 fixing date formats as there was inconsistencies and different formats reocrded and setting a data quality flag
 
-## Step 7 : Detect & cap ouliers using percentiles (IQR)
+## Step 7 : Detect & cap outliers using percentiles (IQR)
 
 <img width="4232" height="3844" alt="image" src="https://github.com/user-attachments/assets/3d79c0d3-006b-4528-985e-c4fc83236cd2" />
 
