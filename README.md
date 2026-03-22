@@ -1,5 +1,5 @@
-# DataCleaning_shipment_data
-Data cleaning project on messy shipment data 
+# DataCleaning_shipment_data  
+Data cleaning project on messy shipment data  (BigQuery Project: https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1sproject-bb3551be-8ada-46bf-bfa!2safrica-south1!3sfbdb4ffa-9b07-4618-89fe-df535fa87647!2e1)
 
 ## Step 1: Removing Trailing/Leading spaces
 
@@ -32,8 +32,4 @@ fixing date formats as there was inconsistencies and different formats reocrded 
 ## Step 7 : Detect & cap ouliers using percentiles (IQR)
 
 <img width="4232" height="3844" alt="image" src="https://github.com/user-attachments/assets/3d79c0d3-006b-4528-985e-c4fc83236cd2" />
-
-
-Full Query : Final Output
-<img width="288" height="1080" alt="compressed_Snippet (1)" src="https://github.com/user-attachments/assets/58a3473d-04f2-4999-a975-7faa2450aa85" />
 
