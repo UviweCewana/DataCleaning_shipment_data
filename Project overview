@@ -49,7 +49,7 @@ Raw shipment data containing **25 records** with various data quality issues:
 The pipeline is structured as **6 progressive stages**, each building upon the previous:
 
 ### Stage 1: Text Standardization
-**Goal:** Normalize all text fields for consistency
+**Goal:** Normalize all text fields for consistency 
 
 ```sql
 -- Remove whitespace, standardize case
