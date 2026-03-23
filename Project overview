@@ -56,3 +56,6 @@ The pipeline is structured as **6 progressive stages**, each building upon the p
 INITCAP(TRIM(origin_warehouse))    -- 'warehouse a' → 'Warehouse A'
 UPPER(TRIM(destination_state))      -- 'tx' → 'TX'
 INITCAP(TRIM(carrier))              -- 'FASTFREIGHT' → 'Fastfreight'
+
+
+(BigQuery Project: https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1sproject-bb3551be-8ada-46bf-bfa!2safrica-south1!3sfbdb4ffa-9b07-4618-89fe-df535fa87647!2e1)
